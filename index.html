@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Information About Tahir</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+function func1()
+{
+var tmp=new Date();
+var hours=tmp.getHours();
+var minutes=tmp.getMinutes();
+var seconds=tmp.getSeconds();
+minutes=func2(minutes);
+seconds=func2(seconds);
+document.getElementById('tim').innerHTML=hours+":"+minutes+":"+seconds;
+setTimeout(func1,500);
+}
+function func2(m)
+{
+if(m<10){m="0"+m;}
+return m;
+}
+</script>
+<style>
+#tim{
+color:solace;
+font-weight:bold;
+background-color:khaki;
+font-size:30px;
+margin-left:1170px;
+width:200px;
+text-align:center;
+border-radius:20px;}
+th,td{
+text-align:left;
+padding:2px;}
+header,#ww{
+animation:blinker 2s linear infinite;}
+@keyframes blinker{
+50%{
+opacity:0;
+}
+}
+.slideshow-container{
+  max-width:1000px;
+  position:relative;
+  margin:auto;
+}
+.mySlides{
+  display: none;
+}
+.prev,.next{
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  width:auto;
+  margin-top:-22px;
+  padding:16px;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+  transition:0.6s ease;
+  border-radius:0 3px 3px 0;
+  user-select:none;
+}
+.next{
+  right:0;
+  border-radius:3px 0 0 3px;
+}
+.prev:hover,.next:hover {
+  background-color:rgba(0,0,0,0.8);
+}
+.text{
+  color:#f2f2f2;
+  font-size:15px;
+  padding:8px 12px;
+  position:absolute;
+  bottom:8px;
+  width:100%;
+  text-align:center;
+}
+.numbertext{
+  color:#f2f2f2;
+  font-size:12px;
+  padding:8px 12px;
+  position:absolute;
+  top:0;
+}
+.dot{
+  cursor:pointer;
+  height:15px;
+  width:15px;
+  margin:0 2px;
+  background-color:#bbb;
+  border-radius:50%;
+  display:inline-block;
+  transition:background-color 0.6s ease;
+}
+
+.active,.dot:hover{
+  background-color:#717171;
+}
+.fade{
+  -webkit-animation-name:fade;
+  -webkit-animation-duration:1.5s;
+  animation-name:fade;
+  animation-duration:1.5s;
+}
+
+@-webkit-keyframes fade{
+  from{opacity:.4}
+  to{opacity:1}
+}
+
+@keyframes fade{
+  from{opacity:.4}
+  to{opacity:1}
+}
+button{
+background-color:magenta;
+font-weight:bold;
+border:2px solid green;
+border-radius:4px;}
+img{
+display:block;
+margin-left:auto;
+margin-right:auto;
+width:200px;
+height:230px;
+border:2px solid pink;}
+.fa{
+  padding:5px;
+  font-size: 30px;
+  width: 40px;
+  text-align:center;
+  text-decoration: none;
+ margin:30px auto 20px auto;
+   }
+	 .fa:hover{
+	 opacity:0.7;
+	 }
+.fa-twitter{
+	 background: #55ACEE;
+  color: white;
+	 }
+.fa-whatsapp {
+  background:green;
+  color: white;
+}
+.fa-facebook {
+  background:blue;
+  color: white;
+}
+#div1{
+text-align:center;
+background-color:#B1111A;
+border-radius:10px;}
+
+*{
+box-sizing:border-box;}
+header{
+background-color:khaki;
+padding:30px;
+text-align:center;
+font-size:25px;
+color:tomato;}
+nav{
+float:left;
+width:40%;
+height:350px;
+background-color:#ccc;
+padding:20px;}
+article{
+float:left;
+padding:20px;
+width:60%;
+background-color:#f1f1f1;
+height:350px;}
+section:after{
+content:"";
+display:table;
+clear:both;
+}
+footer{
+background-color:#777;
+text-align:center;
+padding:20px;
+color:white;}
+@media (max-width:600px){
+nav,article{
+width:100%;
+height:auto;
+}
+}
+iframe{
+border:4px solid yellow;
+border-radius:20px;}
+</style>
+<script>
+</script>
+</head>
+<body onload="func1()">
+<button onclick="window.location.href='#bottom'">Jump To Bottom</button>
+<p id="tim"></p>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="tahir1.jpg" style="width:100%">
+    <div class="text">Caption one</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="tahir2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="tahir3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+<div class="mySlides fade">
+    <div class="numbertext">4/ 5</div>
+    <img src="tahir4.jpg" style="width:100%">
+    <div class="text">Caption four</div>
+  </div>
+<div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="tahir5.jpg" style="width:100%">
+    <div class="text">Caption five</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+<header>
+<p>About Tahir</p>
+</header>
+<section>
+<nav>
+<ul type="square">
+<table>
+<tr>
+<th><li>Name: </li></th> <td> Tahir Samad</td>
+</tr><tr>
+<th><li>Father's Name:</li> </th> <td> Abdul Samad</td>
+</tr><tr>
+<th> <li>Education:</li></th> <td> Bsc Non-Medical</td>
+</tr><tr>
+<th><li>College:</li> </th> <td> Govt. Degree College Sogam</td>
+</tr>
+<tr>
+<th><li>Sports:</li></th> <td> Jammu & Kashmir cricket Association.</td>
+</tr>
+<tr>
+<th><li>Address:</li></th> <td> Dardpora lolab, kupwara, j&k</td>
+</tr>
+<tr>
+<th><li>Contact: </li></th> <td> +91-9541808052</td>
+</tr>
+<tr><th> <li>Email Id:</li></th><td> <a href="mailto:tahirsamad51@gmail.com"/> Click Me</a></td></li>
+</table>
+</ul>
+</nav>
+<article>
+<p>The man who started his initial schooling from his native village & proved his excellence in educatioin as well as cricket. The man who improved his cricketing skills from far flung area with no facility at all. Playing in streets, & paddy fields, this man proved himself a good cricketer in & outside Lolab valley.
+The man who always used to top his class upto high school education,opted to tempt his luck in cricket. He always used to deliver speeches in schools, & taking part in extra co-curricular activities. He who used to win prizes in school debates & functions, kept himself high in cricketing, & volleyball too. He had given all his best with teams, he palyed. The man who is known for his calmness,defendable,and agressive style of scoring whenever needed,had won many MOM,& MOS awards. He is also known for his superman fielding,& had won more than 10 best fielder awards in different tournaments as well. He is a well known top order cricketer, who can bowl spin & can swing, with lot to explore yet. He had played with the well known teams of the valley like DMWCC, MCC, YMC, Green Boys Chepora, Friends Eleven Lolab, Muqam Challengers,DCC, & many more. Tahir has got support well from his family, especially his elder brother who used to give him all necessary equipments, instructions, & other required things.
+<pre> Favourite cricketer - AB de Villers.
+                                  By Farooq Ahmad</pre></p>
+</article>
+</section>
+<footer><b><ul><li>Compromise for your dream, but never compromise on your dream.</li><li>You don't play for the crowd , you play for the team</li></ul></footer>
+<br><iframe src="https://www.youtube.com/embed/CaIodq3Hynw" name="myframe" height="400px" width="100%"></iframe>
+<pre>                                                      </pre><a href="https://www.youtube.com/embed/Sd-YsMs3OzA" target="myframe"> Watch More</a><hr>
+<div id="div1"><a href="https://api.whatsapp.com/send?phone=919541808052" class="fa fa-whatsapp"></a>
+<a href="https://api.whatsapp.com/send?phone=919541808052" class="fa fa-facebook"></a>&nbsp&nbsp&emsp;Designed By Sadam <a id="ww" href="https://twitter.com/myselfsadam_?s=09"class="fa fa-twitter"></a></div><hr>
+</body>
+<audio controls autoplay hidden>
+    <source src="abcde.mp3">
+  </audio>
+<div id="bottom"></div>
+</html>
+<button onclick="window.location.href='#top'">Jump To Top</button>
