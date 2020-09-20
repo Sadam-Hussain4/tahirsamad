@@ -22,32 +22,27 @@ function func2(m)
 if(m<10){m="0"+m;}
 return m;
 }
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+var images=[
+"tahir1.jpg",
+"tahir2.jpg",
+"tahir3.jpg",
+"tahir4.jpg",
+"tahir5.jpg",
+"tahir6.jpg",
+"tahir7.jpg",
+"tahir8.jpg",
+"tahir9.jpg",
+"tahir10.jpg",
+"tahir11.jpg",
+"tahir12.jpg",
+];
+var i=0;
+function slide(){
+document.getElementById("images1").src=images[i];
+if(i<(images.length-1))
+i++;
+else i=0;}
+setInterval(slide,2000);
 </script>
 <style>
 #tim{
@@ -55,11 +50,7 @@ color:solace;
 font-weight:bold;
 background-color:khaki;
 font-size:30px;
-<<<<<<< HEAD
 margin-left:200px;
-=======
-margin-left:100px;
->>>>>>> 35b1580a7b7bd2f1909b59e0ad7513a7f0fe194f
 width:200px;
 text-align:center;
 border-radius:20px;}
@@ -73,116 +64,7 @@ animation:blinker 2s linear infinite;}
 opacity:0;
 }
 }
-.mySlides {display: none}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-<<<<<<< HEAD
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-=======
-.mySlides{
-  display:none;
->>>>>>> 35b1580a7b7bd2f1909b59e0ad7513a7f0fe194f
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-<<<<<<< HEAD
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-=======
-@-webkit-keyframes fade{
-  from{opacity:.4}
-  to{opacity:1}
-}
-@keyframes fade{
-  from{opacity:.4}
-  to{opacity:1}
->>>>>>> 35b1580a7b7bd2f1909b59e0ad7513a7f0fe194f
-}
 button{
 background-color:magenta;
 font-weight:bold;
@@ -215,6 +97,7 @@ border-radius:4px;}
 text-align:center;
 background-color:#B1111A;
 border-radius:10px;}
+
 *{
 box-sizing:border-box;}
 header{
@@ -254,58 +137,27 @@ height:auto;
 iframe{
 border:4px solid yellow;
 border-radius:20px;}
+img{
+display:block;
+margin-left:auto;
+margin-right:auto;
+border:2px solid blue;
+border-radius:22px;}
+#new{
+color:red;
+animation:blinker 0.3s linear infinite;}
+marquee{
+background-color:silver;}
+
 </style>
 <script>
 </script>
 </head>
 <body onload="func1()">
 <button onclick="window.location.href='#bottom'">Jump To Bottom</button>
-<p id="tim"></p>
-<div class="slideshow-container">
-  <div class="mySlides fade">
-<<<<<<< HEAD
-    <div class="numbertext">1 / 5</div>
-    <img src="tahir1.jpg"alt="iammm" style="width:100%">
-    <div class="text">Caption one</div>
-    </div>
-
-=======
-    <div class="numbertext">1/5</div>
-    <img src="tahir1.jpg" style="width:100%;height:200px;">
-    <div class="text">Caption one</div>
-  </div>
->>>>>>> 35b1580a7b7bd2f1909b59e0ad7513a7f0fe194f
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 5</div>
-    <img src="tahir2.jpg" style="width:100%;height:200px;">
-    <div class="text">Caption Two</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 5</div>
-    <img src="tahir3.jpg" style="width:100%;height:200px;">
-    <div class="text">Caption Three</div>
-</div>
-<div class="mySlides fade">
-    <div class="numbertext">4/5</div>
-    <img src="tahir4.jpg" style="width:100%;height:200px">
-    <div class="text">Caption four</div>
-  </div>
-<div class="mySlides fade">
-    <div class="numbertext">5/5</div>
-    <img src="tahir5.jpg" style="width:100%;height:200px;">
-    <div class="text">Caption five</div>
- </div>
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
-</div>
+<span id="tim"></span>
+<marquee behavior="scroll" scrollamount="15"direction="left"><span>Welcome dear visitor.&emsp;&emsp;&emsp;&emsp;&emsp;  Highlights: Tahir smashed unbeaten 60 at sogam<span><span id="new"><sup>NEW</sup></span> &emsp;&emsp;&emsp;&emsp;&emsp;<span>Tahir declared MOM in ongoing tournament at sogam</span><span id="new"><sup>NEW</sup></span> &emsp;&emsp;&emsp;&emsp;&emsp;</marquee>
+<p><img id="images1" width="300px" height="300px"></p>
 <header>
 <p>About Tahir</p>
 </header>
